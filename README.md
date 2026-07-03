@@ -8,15 +8,25 @@
 [![Rust](https://img.shields.io/badge/Rust-2021-DEA584?logo=rust&logoColor=white)](https://www.rust-lang.org)
 [![Release](https://img.shields.io/github/v/release/Cupcc/CCleaner?color=green)](https://github.com/Cupcc/CCleaner/releases)
 
-轻量的 Windows C 盘清理桌面应用（Tauri v2，浅色界面、无边框自定义标题栏，纯静态 HTML 前端，无 Node 依赖，无控制台窗口）。单个 exe 约 8 MB。
+**单文件 8 MB · 秒开秒扫 · 完全离线 · 免费开源** —— 给 C 盘快满了的你。
 
 </div>
 
-原则：**启动即扫描；删除前弹窗确认；占用中的文件自动跳过；不跟随符号链接/junction；只清能安全清理的项。**
+## cclean简介
+
+- 🪶 **体积极小** — 单个 exe 仅 **8 MB**,免安装、绿色便携,下载即用,删掉不留痕。市面清理软件动辄一两百 MB 安装包,还要常驻后台。
+- ⚡ **快** — 实测冷启动 **0.2 秒**出窗口,打开即自动扫描,不用点任何按钮就能看到能腾出多少空间;自身进程内存仅 **~35 MB**（界面复用系统自带 WebView2,不打包 Chromium）。
+- 🔌 **完全离线** — 全部代码**零网络请求**:不联网、无遥测、无自动更新、不上传任何数据。源码就在这里,可自行审计、自行编译。
+- 🆓 **真免费** — MIT 开源。没有广告、没有弹窗、没有「深度清理请开通会员」。
+- 🛡️ **不乱删** — 删除前弹窗确认;护栏校验拒绝可疑路径,%USERPROFILE% / %WINDIR% 等关键目录碰不到;占用中的文件自动跳过;不跟随符号链接。
+- 🎯 **AI提示协助选择删除** — 近 20 类清理项,每项可**展开到具体路径逐条勾选**,并标注安全等级徽标（可安全清理 / 可重新下载 / 谨慎）,不做一键全删的莽夫。
+- 🧹 **清得干净** — 回收站、临时文件、Edge/Chrome/Firefox 浏览器缓存、Electron/QQ/Store 应用缓存、缩略图/字体/着色器缓存、崩溃转储、开发包缓存(npm/pip/cargo…),直到休眠文件、Windows.old、WinSxS 组件存储等系统级大头。
+
+> 实测数据来自 Win11 桌面机,不同机器略有差异。
 
 ## 下载
 
-前往 [Releases](https://github.com/Cupcc/CCleaner/releases) 下载 `cclean.exe`,双击即用（依赖 WebView2,Win11 自带）。建议右键「以管理员身份运行」以清理系统目录。
+前往 [Releases](https://github.com/Cupcc/CCleaner/releases) 下载 `cclean.exe`,双击即用（依赖 WebView2,Win11 自带）。建议右键「以管理员身份运行」,否则部分系统目录无法清理。
 
 ## 构建 / 运行
 
