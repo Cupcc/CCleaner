@@ -1,0 +1,11 @@
+{
+  "identifier": "default",
+  "description": "窗口控制（最小化/关闭/拖动）",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "core:window:allow-minimize",
+    "core:window:allow-close",
+    "core:window:allow-start-dragging"
+  ]
+}
